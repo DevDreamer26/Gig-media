@@ -7,7 +7,7 @@ const HomePage = () => {
 	return (
 		<Container maxW={"container.lg"}  >
 			<Flex gap={20} >
-				<Box flex={2} py={10} bg={"#cfe3ff"} border={"1px solid black"}>
+				<Box flex={2} py={10} bg={"white"} border={"1px solid black"}>
 					<FeedPosts />
 					<NewSuggest />
 				</Box>

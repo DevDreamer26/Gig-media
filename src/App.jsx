@@ -10,7 +10,7 @@ function App() {
 	const [authUser] = useAuthState(auth);
 
 	return (
-		<PageLayout > 
+		<PageLayout> 
 			<Routes>
 				<Route path='/' element={authUser ?<HomePage />:<Navigate to='/auth' /> } />
 				<Route path='/auth' element={!authUser ? <AuthPage /> : <Navigate to='/' />} />
