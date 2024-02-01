@@ -50,6 +50,10 @@ const About = () => {
               <ChakraLink href="mailto:chinmoykoch12@gmail.com" color="blue.500" fontWeight="bold">
                 chinmoykoch12@gmail.com
               </ChakraLink>
+              <br />
+              <ChakraLink href="mailto:indokalpasaikia1@gmail.com" color="blue.500" fontWeight="bold">
+                indokalpasaikia1@gmail.com
+              </ChakraLink>
             </Text>
             {/* <Text fontSize={{ base: "md", md: "lg" }} mb={4}>
               See more of our projects at{" "}
@@ -82,6 +86,16 @@ const About = () => {
               fontWeight="bold"
             >
               GitHub (Chinmoy)
+            </ChakraLink>
+            <br/>
+            <ChakraLink
+              href="https://github.com/indokalpasaikia1"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="blue.500"
+              fontWeight="bold"
+            >
+              GitHub (Indokalpa Saikia)
             </ChakraLink>
 
           </ModalBody>
