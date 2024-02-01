@@ -17,7 +17,7 @@ const Sidebar = () => {
       position={"sticky"}
       top={0}
       left={0}
-      px={{ base: 2, md: 4 }} bg={"#3a4750"} color={"white"}
+      px={{ base: 2, md: 4 }} bg={"#e7eefa"} color={"black"}
     >
       <Flex direction={"column"} gap={10} w="full" height={"full"}>
         <Link
