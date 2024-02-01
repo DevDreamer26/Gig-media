@@ -73,7 +73,7 @@ const Sidebar = () => {
               variant={"ghost"}
               _hover={{ bg: "transparent" }}
               isLoading={isLoggingOut}
-              color={"#fff"}
+              color={"#000"}
             >
               Logout
             </Button>
