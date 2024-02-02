@@ -1,9 +1,15 @@
 import { Box, Flex, Tooltip, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useDisclosure, Text, Link as ChakraLink } from "@chakra-ui/react";
 import { FcAbout } from "react-icons/fc";
+import { motion } from "framer-motion";
 
+const MotionBox = motion(Box);
 
 const About = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const handleHover = () => {
+    
+  };
 
   return (
     <>
@@ -15,26 +21,37 @@ const About = () => {
         openDelay={500}
         display={{ base: "block", md: "none" }}
       >
-        <Flex
-          alignItems={"center"}
-          gap={4}
-          _hover={{ bg: "whiteAlpha.400" }}
+        <MotionBox
+          whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
           borderRadius={6}
           p={2}
           w={{ base: 10, md: "full" }}
-          justifyContent={{ base: "center", md: "flex-start" }}
           onClick={onOpen}
           cursor="pointer"
         >
-          <FcAbout />
-          <Box display={{ base: "none", md: "block" }}>About</Box>
-        </Flex>
+          <Flex
+            as="button"
+            alignItems={"center"}
+            gap={4}
+            _hover={{ bg: "whiteAlpha.400" }}
+            borderRadius={6}
+            p={2}
+            w={{ base: 10, md: "full" }}
+            justifyContent={{ base: "center", md: "flex-start" }}
+            onClick={onOpen}
+            onMouseEnter={handleHover}
+            cursor="pointer"
+          >
+            <FcAbout />
+            <Box display={{ base: "none", md: "block" }}>About</Box>
+          </Flex>
+        </MotionBox>
       </Tooltip>
 
       <Modal isOpen={isOpen} onClose={onClose} size="lg">
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>About the App</ModalHeader>
+        <ModalContent borderRadius={8} boxShadow="lg">
+          <ModalHeader textAlign="center" fontSize="2xl">About the App</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Text fontSize={{ base: "md", md: "lg" }} mb={4}>
@@ -55,19 +72,6 @@ const About = () => {
                 indokalpasaikia1@gmail.com
               </ChakraLink>
             </Text>
-            {/* <Text fontSize={{ base: "md", md: "lg" }} mb={4}>
-              See more of our projects at{" "}
-              <ChakraLink
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                color="blue.500"
-                fontWeight="bold"
-              >
-                GitHub
-              </ChakraLink>
-              
-            </Text> */}
             <ChakraLink
               href="https://github.com/DevDreamer26"
               target="_blank"
@@ -97,7 +101,6 @@ const About = () => {
             >
               GitHub (Indokalpa Saikia)
             </ChakraLink>
-
           </ModalBody>
         </ModalContent>
       </Modal>
